@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <ThemeProvider theme={theme}>
           <Global styles={GlobalStyles} />
           <BrowserRouter
-          //  basename="/goit-react-hw-08-phonebook/"
+           basename="/goit-react-hw-08-phonebook/"
           >
             <App />
           </BrowserRouter>
