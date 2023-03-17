@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchAllCharacters, getFilteredByNameCharacters } from 'services/api';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const getCharacters = createAsyncThunk(
   'characters/getAll',
@@ -17,6 +18,7 @@ export const getfilteredByName = createAsyncThunk(
     try {
       return await getFilteredByNameCharacters(obj);
     } catch (error) {
+      Notify.failure('There is nothing here. Please enter another word!');
       return thunkAPI.rejectWithValue(error.message);
     }
   }

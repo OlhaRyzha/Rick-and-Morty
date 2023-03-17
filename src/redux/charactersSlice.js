@@ -12,7 +12,6 @@ const initialState = {
   error: null,
   page: 1,
   pages: 1,
-  count: 0,
   name: '',
 };
 
@@ -32,7 +31,6 @@ const charactersSlice = createSlice({
       // ----- filteredByName -----
 
       .addCase(getfilteredByName.fulfilled, (state, { payload }) => {
-        state.count = payload.info?.count;
         state.value = payload.results;
       })
       .addCase(getNameByValue.fulfilled, (state, { payload }) => {

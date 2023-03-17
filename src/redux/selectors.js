@@ -13,6 +13,5 @@ export const getFilteredCharacters = createSelector(
 );
 export const getIsloading = state => state.charactersData.isLoading;
 export const getPages = state => state.charactersData.pages;
-export const getCount = state => state.charactersData.count;
 export const getPage = state => state.charactersData.page;
 export const getName = state => state.charactersData.name;

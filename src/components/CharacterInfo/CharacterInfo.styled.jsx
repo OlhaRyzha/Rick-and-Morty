@@ -30,6 +30,10 @@ export const Image = styled.img`
   border: 5px solid #f2f2f7;
   border-radius: 150px;
   margin-bottom: 34px;
+  @media (min-width: 1440px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 export const AccentTitle = styled.p`
   font-weight: 500;

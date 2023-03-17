@@ -27,8 +27,6 @@ function FilteredCharacter() {
         placeholder="Filter by name..."
         type="text"
         name="name"
-        // value={name}
-
         onChange={debounce(event => {
           dispatch(getfilteredByName({ name: event.target.value }));
           dispatch(getNameByValue(event.target.value));
